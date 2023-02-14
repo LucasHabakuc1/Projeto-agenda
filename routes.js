@@ -1,8 +1,8 @@
 const express = require('express');
 const route = express.Router();
 
-const homeController = require('./src/controllers/homecontroller');
-const loginController = require('./src/controllers/logincontroller');
+const homeController = require('./src/controllers/homeController');
+const loginController = require('./src/controllers/loginController');
 const contatoController = require('./src/controllers/contatoContoller');
 
 const { loginRequired } = require('./src/middleware/middlerware');

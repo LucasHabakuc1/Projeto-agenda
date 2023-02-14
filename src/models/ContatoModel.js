@@ -1,5 +1,8 @@
 const mongoose = require('mongoose');
+<<<<<<< HEAD
 const { async } = require('regenerator-runtime');
+=======
+>>>>>>> 6d89e1975afba00b4a7de6dc0aebfdc4d8c5ec8f
 const validator = require('validator');
 
 const ContatoSchema = new mongoose.Schema({
@@ -7,6 +10,10 @@ const ContatoSchema = new mongoose.Schema({
     sobrenome: { type: String, required: false, default: '' },
     email: { type: String, required: false, default: '' },
     telefone: { type: String, required: false, default: '' },
+<<<<<<< HEAD
+=======
+    obse: { type: String, required: false, default: '' },
+>>>>>>> 6d89e1975afba00b4a7de6dc0aebfdc4d8c5ec8f
     criadoEm: { type: Date, default: Date.now },
 });
 
@@ -48,6 +55,10 @@ Contato.prototype.cleanUp = function () {
         sobrenome: this.body.sobrenome,
         email: this.body.email,
         telefone: this.body.telefone,
+<<<<<<< HEAD
+=======
+        obse: this.body.obse,
+>>>>>>> 6d89e1975afba00b4a7de6dc0aebfdc4d8c5ec8f
     }
 };
 
