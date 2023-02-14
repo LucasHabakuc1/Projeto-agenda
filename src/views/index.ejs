@@ -9,22 +9,27 @@
       <h1 class="text-center">Agenda</h1>
       <p class="text-center lead">Seus contatos estão abaixo</p>
 
-      <div class="row">
-        <div class="col my-3">
-          <div class="alert alert-danger">Um erro qualuqer</div>
-        </div>
-      </div>
+      <%- include('includes/messages') %>
+
+      <% if(contatos.length > 0) { %>
 
       <div class="responsive-table my-3">
         <table class="table">
+          <% contatos.forEach(contato => { %>
           <tr>
-            <td>Nome</td>
-            <td>Sobrenome</td>
-            <td>Telefone: (00)00000-0000</td>
-            <td>E-mail: (email.teste@email.com</td>
+            <td><%= contato.nome %></td>
+            <td><%= contato.sobrenome %></td>
+            <td><%= contato.telefone %></td>
+            <td><%= contato.email %></td>
+            <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
+            <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
           </tr>
+          <% }); %>
         </table>
       </div>
+      <% } else { %> 
+        <p class="text-center lead">Não a contatos.</p>
+      <% } %>
 
     </div>
 
